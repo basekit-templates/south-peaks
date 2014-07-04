@@ -1,0 +1,148 @@
+{
+    "name":"Summer River",
+    "thumbnail":"summer-river.png",
+    "screenshot":"summer-river.png",
+    "templateType":"menu",
+    
+    "tags": {
+    "en": ["minimal", "clean", "photography", "vintage", "modern", "dark", "studio", "website", "creative", "elegant", "professional", "unique", "media", "sans-serif"],
+    "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
+    "br": ["minimalista", "limpo", "fotografia", "vintage", "moderno", "escuro", "estúdio", "website", "criativo", "elegante", "profissional", "único", "mídia", "sans-serif"]
+    },
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#829697",
+            "color3":"#94bfc1",
+            "color4":"#669595",
+            "color5":"#313131",
+            "color6":"#232323",
+            "color7":"#ffffff"
+        },
+        "Swatch 2": {
+            "color1":"#fefbf6",
+            "color2":"#e9a12a",
+            "color3":"#eeb960",
+            "color4":"#df9418",
+            "color5":"#573a0a",
+            "color6":"#3e2907",
+            "color7":"#fefbf6"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#888297",
+            "color3":"#a094c1",
+            "color4":"#716695",
+            "color5":"#313131",
+            "color6":"#232323",
+            "color7":"#ffffff"
+        },
+        "Swatch 4": {
+            "color1":"#fdf8f8",
+            "color2":"#cc4646",
+            "color3":"#d97575",
+            "color4":"#c13535",
+            "color5":"#4b1515",
+            "color6":"#350f0f",
+            "color7":"#fdf8f8"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#979282",
+            "color3":"#c1b594",
+            "color4":"#958766",
+            "color5":"#313131",
+            "color6":"#232323",
+            "color7":"#ffffff"
+        }
+    },
+    "fontSwatch": {
+       "title": "Oswald / Lato",
+        "font1": {
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-size": "38px",
+            "font-weight": "400",
+            "line-height": "52px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-size": "18px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-size": "23px",
+            "font-weight": "400",
+            "line-height": "42px",
+            "color": "@color-swatch2",
+            "letter-spacing": "1px"
+        },
+        "font4": {
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-size": "16px",
+            "font-weight": "600",
+            "line-height": "22px",
+            "color": "@color-swatch2",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "24px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-size": "18px",
+            "font-weight": "300",
+            "line-height": "28px",
+            "color": "@color-swatch2",
+            "letter-spacing": "1px",
+            "color-hover": "@color-swatch3",
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
+         },
+        "font7": {
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-size": "14px",
+            "font-weight": "normal",
+            "line-height": "24px",
+            "color": "@color-swatch7",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch2",
+            "background-color-hover": "darken(@color-swatch2,10%)"
+        },
+        "font8": {
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-size": "82px",
+            "font-weight": "600",
+            "line-height": "52px",
+            "color": "@color-swatch7",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-size": "26px",
+            "font-weight": "500",
+            "line-height": "38px",
+            "color": "@color-swatch7",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-size": "42px",
+            "font-weight": "400",
+            "line-height": "52px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        }
+    }
+}
