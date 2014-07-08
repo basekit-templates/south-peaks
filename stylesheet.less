@@ -290,7 +290,7 @@ hr.line {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	width: 100%
+	width: 100%;
 }
 
 .featured-tweet p {
@@ -302,6 +302,14 @@ hr.line {
 	font-size: 20px;
 }
 
+.featured-tweet .bk-full-name {
+    color: red
+}
+
+.widget.twitter span {
+	display: none;
+}
+
 .featured-tweet ul li a {
 	font-family:@font-swatch5-font-family;
 	font-weight: @font-swatch5-font-weight;
@@ -311,8 +319,19 @@ hr.line {
 	font-size: 20px;
 }
 
+
 .widget.twitter .twitter-profile-pic {
+	margin-right: 0;
 	float: center;
+}
+
+.widget.twitter .created_at {
+	font-family:@font-swatch7-font-family;
+	font-weight: @font-swatch7-font-weight;
+	color:@font-swatch7-color;
+	line-height:@font-swatch7-line-height;
+	letter-spacing: @font-swatch7-letter-spacing;
+	font-size: 16px;
 }
 
 
@@ -360,6 +379,10 @@ hr.line {
 	width: 100%;
 }
 
+.widget .extendednavigation ul li a:hover {
+	color: lighten(@color-swatch2, 10%);
+}
+
 .widget.extendednavigation ul {
 	max-width: 1000px;
 	margin: 0 auto;
@@ -383,6 +406,7 @@ hr.line {
 	}
 	li.folder:hover {
 		ul {
+			color: lighten(@color-swatch2, 10%);
 			border: 1px solid lighten(@font-swatch6-color, 85%);
 		}
 	}
@@ -402,7 +426,9 @@ hr.line {
 }
 
 .widget .extendednavigation ul li:hover ul {
+	color: lighten(@color-swatch2, 10%);
 	background-color: transparent;
+	border: none;
 }
 
 
@@ -616,8 +642,7 @@ button.btn,
 .widget.profile .bk-profile-socialicons span a,
 .template-footer .widget.profile .bk-profile-socialicons span a {
 	-webkit-font-smoothing: inherit;
-	border: 1px solid darken(@font-swatch7-background-color, 5%);
-	border-radius: 2px;
+	border-radius: 26px;
 	color: @font-swatch7-color;
 	background-color: @font-swatch7-background-color;
 	line-height: @font-swatch7-line-height;
@@ -625,14 +650,17 @@ button.btn,
 	font-family: @font-swatch7-font-family;
 	cursor: pointer;
 	&:hover {
-		background-color: @font-swatch7-background-color-hover;
+		background-color: lighten(@font-swatch7-background-color-hover, 10%);
 	}
 }
 
 .widget.socialicons span a,
 .widget.profile .bk-profile-socialicons span a,
 .template-footer .widget.profile .bk-profile-socialicons span a	{
+	border: 2px solid darken(@color-swatch1, 10%);
+	background-color: transparent;
 	border-radius: 100%;
+	padding: 26px;
 }
 
 .clicktocall a,
@@ -810,8 +838,137 @@ input[type="search"]::-webkit-search-decoration {
 	margin: 0 auto;
 }
 
-// 11. Misc
-// Nothing to see here
+// 11. Misc / Contact Form
+
+.widget.socialicons, .widget.profile .bk-profile-socialicons {
+	margin: 2em 0 1em;
+	text-align: left;
+    span a {
+		background-color: transparent;
+		background-size: 22px;
+		&:hover{
+			background-color: transparent;
+		}
+	}
+}
+
+.svg {
+	.bk-socialicons-linkedin {
+		a {
+			background-image: image('/images/social/socialicons-linkedin.svg');
+			&:hover {
+				background-image: image('/images/social/socialicons-linkedin-hover.svg');
+			}
+		}
+	}
+	.bk-socialicons-twitter {
+		a {
+			background-image: image('/images/social/socialicons-twitter.svg');
+			&:hover {
+				background-image: image('/images/social/socialicons-twitter-hover.svg');
+			}
+		}
+	}
+	.bk-socialicons-facebook {
+		a {
+			background-image: image('/images/social/socialicons-facebook.svg');
+			&:hover {
+				background-image: image('/images/social/socialicons-facebook-hover.svg');
+			}
+		}
+	}
+	.bk-socialicons-rss {
+		a {
+			background-image: image('/images/social/socialicons-rss.svg');
+			&:hover {
+				background-image: image('/images/social/socialicons-rss-hover.svg');
+			}
+		}
+	}
+	.bk-socialicons-googleplus {
+		a {
+			background-image: image('/images/social/socialicons-googleplus.svg');
+			&:hover {
+				background-image: image('/images/social/socialicons-googleplus-hover.svg');
+			}
+		}
+	}
+	.bk-socialicons-youtube {
+		a {
+			background-image: image('/images/social/socialicons-youtube.svg');
+			&:hover {
+				background-image: image('/images/social/socialicons-youtube-hover.svg');
+			}
+		}
+	}
+}
+
+
+
+.widget.contactform form {
+    display: block;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.widget.contactform fieldset {
+    border: none;
+    padding: 0;
+}
+
+.widget.contactform fieldset label {
+    width: 100%;
+    float: left;
+    font-family:@font-swatch4-font-family;
+    font-size:font-swatch4-font-size;
+    font-weight:@font-swatch4-font-weight;
+    line-height:@font-swatch4-line-height;
+    color:@color-swatch3;
+    letter-spacing: @font-swatch4-letter-spacing;
+    display:none;
+}
+
+.widget.contactform form fieldset input {
+    width: 100%;
+    padding:5px 0px;
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: @font-swatch5-color;
+    text-indent: 12px;
+    margin-bottom: 20px;
+    background-color:darken(@color-swatch1,3%);
+    border:0;
+    -webkit-box-shadow: 0px 1px rgba(255, 255, 255, 0.5); 
+    -moz-box-shadow: 0px 1px rgba(255, 255, 255, 0.5); 
+    box-shadow: 0px 1px rgba(255, 255, 255, 0.5); 
+    -webkit-border-radius: 3px; 
+    -moz-border-radius: 3px; 
+    border-radius: 3px;
+}
+
+.widget.contactform form fieldset textarea {
+    width: 100%;
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: @font-swatch5-color;
+    border-bottom: solid 2px;
+    text-indent: 8px;
+    padding-top: 14px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    resize: none;
+    padding: 10px 0px 100px 0px;
+    background-color:darken(@color-swatch1,3%);
+    border:0;
+    text-indent:12px;
+}
+
+.widget.contactform fieldset input:focus, .widget.contactform fieldset textarea:focus {
+  outline: none;
+}
 
 // 12. Responsive
 @media (max-width: 725px) {
@@ -829,6 +986,13 @@ input[type="search"]::-webkit-search-decoration {
 	.widget.feature .feature-bgimg .content {
 		height: 220px;
 	}
+	.featured-tweet {
+		display: none;
+	}
+
+
+
+
 }
 @media @tablet {
 	.template-header .template-aside {

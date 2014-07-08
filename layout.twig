@@ -24,11 +24,13 @@
 		<script type="text/javascript">
 			var headerHeight = document.getElementById("header-feature").offsetHeight,
 				feature = $(".header-feature .widget.feature")[0],
+				tweet = $(".widget.twitter .twitter")[0],
 				innerFeature = $(".header-feature .widget.feature .feature-bgimg")[0];
 				
 			window.onscroll = function emParallax() {
 				if(typeof feature === 'object') {
-					feature.style.height = ((window.pageYOffset / 20) * 60) + headerHeight + "px";
+					feature.style.height = ((window.pageYOffset / 300) * 60) + headerHeight + "px";
+					tweet.style.marginBottom = ((window.pageYOffset / -20) * 60) + "px";
 					innerFeature.style.height = ((window.pageYOffset / 20) * 60) + headerHeight + "px";
 				}
 			}
