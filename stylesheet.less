@@ -232,8 +232,9 @@ hr.line {
 		right: 0;
 		text-align: right;
 	}
-	h1, h2 {
+	h2, h3 {
 		color: @color-swatch1;
+		text-shadow: 2px 2px lighten(@color-swatch4,10%);
 			@media @mobile {
 			font-size: bkscale(@font-swatch1-font-size, 0.30);
 			line-height: bkscale(@font-swatch1-line-height, 0.60);
@@ -299,6 +300,9 @@ hr.line {
 	bottom: 0;
 	left: 0;
 	width: 100%;
+	@media only screen and (max-width: 420px) {
+			display: none;
+		}
 }
 
 .featured-tweet p {
@@ -308,6 +312,7 @@ hr.line {
 	line-height:@font-swatch6-line-height;
 	letter-spacing: @font-swatch6-letter-spacing;
 	font-size: 20px;
+	text-shadow: 2px 2px darken(@color-swatch4,30%);
 }
 
 .featured-tweet .bk-full-name {
@@ -329,6 +334,7 @@ hr.line {
 
 
 .widget.twitter .twitter-profile-pic {
+	border-radius: 30px;
 	margin-right: 0;
 	float: center;
 }
@@ -411,6 +417,7 @@ hr.line {
 	}
 	li.folder:after {
 		border-top-color: @font-swatch6-color;
+		right: 0px;
 	}
 	li.folder:hover {
 		ul {
@@ -443,10 +450,10 @@ hr.line {
 // 4. Home
 .home {
 	.header-feature {
-		height: 940px;
+		height: 830px;
 	}
 	.widget.feature .feature-bgimg {
-		height: 900px;
+		height: 830px;
 /*
 		.logo img {
 			max-width: 100%;
@@ -982,17 +989,17 @@ input[type="search"]::-webkit-search-decoration {
 @media (max-width: 725px) {
 	.widget.feature .feature-bgimg,
 	.home .widget.feature .feature-bgimg {
-		height: 275px;
+		height: 575px;
 	}
 	.header-feature,
 	.home .header-feature {
-		height: 275px;
+		height: 575px;
 		.logo img {
 			max-width: 120px;
 		}
 	}
 	.widget.feature .feature-bgimg .content {
-		height: 220px;
+		height: 575px;
 	}
 	.featured-tweet {
 		display: none;
@@ -1037,6 +1044,9 @@ input[type="search"]::-webkit-search-decoration {
 		padding: 0;
 		float: none;
 		width: auto;
+	}
+	.featuretwitter {
+		display: none;
 	}
 	.main-wrap {
 		width: 100%;
