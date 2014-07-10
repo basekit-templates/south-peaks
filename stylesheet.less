@@ -234,6 +234,14 @@ hr.line {
 	}
 	h1, h2 {
 		color: @color-swatch1;
+			@media @mobile {
+			font-size: bkscale(@font-swatch1-font-size, 0.30);
+			line-height: bkscale(@font-swatch1-line-height, 0.60);
+		}
+		@media only screen and (max-width: 420px) {
+			font-size: bkscale(@font-swatch1-font-size, 0.4);
+			line-height: bkscale(@font-swatch1-line-height, 0.75);
+		}
 	}
 	.widget.companyname a {
 		color: @color-swatch1;
@@ -643,6 +651,7 @@ button.btn,
 .template-footer .widget.profile .bk-profile-socialicons span a {
 	-webkit-font-smoothing: inherit;
 	border-radius: 26px;
+	margin-top: 10px;
 	color: @font-swatch7-color;
 	background-color: @font-swatch7-background-color;
 	line-height: @font-swatch7-line-height;
@@ -667,8 +676,7 @@ button.btn,
 .blog-search-form button,
 .widget.profile form button,
 .signupform fieldset button {
-	padding: 8px 14px;
-	margin: 0;
+	padding: 10px 20px;
 }
 
 input[type="search"]::-webkit-search-decoration {
