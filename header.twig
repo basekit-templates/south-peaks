@@ -1,18 +1,10 @@
-<header class="template-header">
-	<div id="header-feature" class="header-feature">
-		<div class="header-fixed">
-			<aside class="template-aside left">
-				{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-			</aside>
-			<aside class="template-aside right">
-				{{widget('extendednavigation', 'header-nav', {"align":"center"})|raw}}
-			</aside>
-		</div>
-		{{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"", "defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '20', 'showBtn': true})|raw}}	
-    	<div class="featured-tweet">
-		{{widget('twitter', 'featuretwitter', {'searchKey': 'basekit', 'searchType': 'username', 'count': '1','refreshTime': '1800000','includeRts': '0'})|raw}}
-		</div>
-	</div>
+<header class="bk-header clearfix">
+	<aside class="template-aside left">
+		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+	</aside>
+	<aside class="template-aside right">
+		{{widget('extendednavigation', 'header-nav', {"align":"right"})|raw}}
+	</aside>
 </header>
 
 <div class="main-wrap">

@@ -52,6 +52,8 @@
 	=============================== */
 @import "@{templateCommon}/basekit-bootstrap.less";
 
+@desktop: ~"only screen and (max-width: 1024px)";
+
 
 /*	===============================
 	Template Styles
@@ -195,7 +197,6 @@ a {
 	}
 }
 
-
 .main-wrap {
 	float: left;
 	width: 100%;
@@ -216,10 +217,13 @@ hr.line {
 }
 
 // 2. Header
+.bk-header {
+	background: @color-swatch6;
+}
+
 .template-header {
 	position: relative;
 	color: @color-swatch1;
-
 	overflow: hidden;
 	position: relative;
 	.left {
@@ -246,14 +250,21 @@ hr.line {
 	}
 	.widget.companyname a {
 		color: @color-swatch1;
+		font-size: @font-swatch10-font-size;
+		line-height: @font-swatch10-line-height;
 	}
 }
 
 .template-aside {
-	width: 50%;
 	padding: 20px 25px;
 	position: relative;
-	float: left
+	float: left;
+	&.left {
+		width: 35%;
+	}
+	&.right {
+		width: 65%;
+	}
 }
 
 .header-feature {
@@ -292,7 +303,9 @@ hr.line {
 
 .widget.feature .feature-bgimg {
 	background-size: 100%;
-/* 	background-position: center top !important; */
+	@media @desktop {
+	 	background-position: center top !important;
+	}
 }
 
 .featured-tweet {
@@ -301,8 +314,8 @@ hr.line {
 	left: 0;
 	width: 100%;
 	@media only screen and (max-width: 420px) {
-			display: none;
-		}
+		display: none;
+	}
 }
 
 .featured-tweet p {
@@ -433,7 +446,8 @@ hr.line {
 	top: 10px;
 	right: 0;
 	&:after {
-		box-shadow: 0 6px 0 @color-swatch2, 0 12px 0 @color-swatch2;
+		background: @color-swatch1;
+		box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
 		left: 4px;
 		top: 7px;
 		width: 22px;
@@ -998,20 +1012,52 @@ input[type="search"]::-webkit-search-decoration {
 			max-width: 120px;
 		}
 	}
-	.widget.feature .feature-bgimg .content {
-		height: 575px;
+	.widget.feature .feature-bgimg {
+		background-position: center top;
+		background-size: cover;
+		min-height: 400px;
+		max-height: 550px;
+		.content {
+			height: 575px;
+		}
 	}
 	.featured-tweet {
 		display: none;
 	}
-
-
-
-
 }
+
+@media @desktop {
+	.widget.feature {
+		h2 {
+			font-size: bkscale(@font-swatch8-font-size, 0.7);
+			line-height: bkscale(@font-swatch8-line-height, 0.8);
+		}
+		h3 {
+			font-size: bkscale(@font-swatch9-font-size, 0.7);
+			line-height: bkscale(@font-swatch9-line-height, 0.8);
+		}
+		.feature-bgimg .content {
+			padding-bottom: 0;
+		}
+	}
+}
+
 @media @tablet {
-	.template-header .template-aside {
-		display: none;
+	.header-fixed {
+		padding: 10px 20px;
+	}
+	.widget.feature {
+		h2 {
+			font-size: bkscale(@font-swatch8-font-size, 0.6);
+			line-height: bkscale(@font-swatch8-line-height, 0.7);
+		}
+		h3 {
+			font-size: bkscale(@font-swatch9-font-size, 0.6);
+			line-height: bkscale(@font-swatch9-line-height, 0.7);
+		}
+		.feature-bgimg .content {
+			padding-bottom: 0;
+		}
 	}
 	.widget.profile form fieldset input,
 	.signupform fieldset input,
@@ -1023,9 +1069,22 @@ input[type="search"]::-webkit-search-decoration {
 		padding-bottom: 40px;
 		float: left;
 		.template-aside {
-			width: 100%;
 			padding: 20px 0 0 0;
 		}
+	}
+	.template-aside {
+		padding: 0;
+		&.left, &.right {
+			display: block;
+			width: 100%;
+		}
+		&.left {
+			padding: 10px 40px 10px 25px;
+		}
+	}
+	.widget.companyname a {
+		font-size: bkscale(@font-swatch10-font-size, 0.9);
+		line-height: bkscale(@font-swatch10-line-height, 1);
 	}
 	.widget .extendednavigation {
 		border-bottom: none;
@@ -1054,6 +1113,18 @@ input[type="search"]::-webkit-search-decoration {
 	.widget .extendednavigation ul li.folder:hover ul {
 		margin: 1px 0 0;
 		border: none;
+	}
+	.widget.extendednavigation ul, .widget.extendednavigation ul li.folder ul {
+		background-color: @color-swatch5;
+	}
+	.widget.extendednavigation a.pull {
+		top: -60px;
+	}
+	.bk-header {
+		.widget.extendednavigation a.pull {
+			right: 15px;
+			top: -50px;
+		}
 	}
 	.widget.responsiveslideshow .description {
 		display: inline-block;
