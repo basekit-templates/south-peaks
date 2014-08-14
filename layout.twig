@@ -11,37 +11,38 @@
 
 	<body id="image-fixed" class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
 
-		<div class="clearfix page-wrap">
-
+		<div class="page-wrap">
+		
+			{% include "header.twig" %}
+			
 			{% block content %}
 			{% endblock %}
 
 			{% include "footer.twig" %}
 
 		</div>
+
 		{% include basekit.bodyScript %}
 
-		<script type="text/javascript">
-			var headerHeight = document.getElementById("header-feature").offsetHeight,
-				feature = $(".header-feature .widget.feature")[0],
-				tweet = $(".widget.twitter .twitter")[0],
-				innerFeature = $(".header-feature .widget.feature .feature-bgimg")[0];
-				
-			window.onscroll = function emParallax() {
-				if(typeof feature === 'object') {
-					feature.style.height = ((window.pageYOffset / 300) * 60) + headerHeight + "px";
-					tweet.style.marginBottom = ((window.pageYOffset / -20) * 60) + "px";
-					innerFeature.style.height = ((window.pageYOffset / 20) * 60) + headerHeight + "px";
-				}
-			}
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="{{ asset('libs/jquery-1.10.2.min.js')}}"><\/script>')</script>
 
+		<script type="text/javascript">
 			!function() {
 				function supportsSVG() {
 					return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect
 				}
 				if (supportsSVG()) document.documentElement.className += ' svg'
-			}();
-
+			}()
+			
+			window.onscroll = function pxParallax() {
+				var parallax = document.getElementById("parallax");
+					parallax.style.top = (window.pageYOffset/2)+"px";
+					parallax.style["-webkit-backface-visibility"] = "hidden";
+					
+				document.getElementById("header-fixed").style.top = (window.pageYOffset)+"px";
+				document.getElementById("image-fixed").style.backgroundPosition = "center "+(window.pageYOffset)+"px";
+			}
 		</script>
 
 	</body>
