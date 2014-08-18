@@ -939,16 +939,6 @@ input[type="search"]::-webkit-search-decoration {
     box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
 }
 
-.svg {
-  .widget.ecomproductslist .ecom-productslist-products .productlist-filter .productlist-display-form .form-group select,
-  .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select {
-    background-image: image('/images/ui-select-arrow.png');
-    background-repeat: no-repeat;
-    background-size: 6px;
-    background-position-x: 93%;
-    background-position-y: 55%;
-  }
-}
 
 // Basket Summary
 // -----------------------------
@@ -1179,6 +1169,13 @@ input[type="search"]::-webkit-search-decoration {
 			width: 100%;
 			padding: 20px 0 0 0;
 		}
+	}
+	.widget .extendednavigation ul li a, .widget .extendednavigation ul li > .text,
+	.widget .extendednavigation ul li.folder .text,
+	.widget .extendednavigation ul li.folder:hover ul {
+		color: darken(@color-swatch3, 10%);
+		margin-right: 20px;
+		background-color: lighten(@color-swatch7, 70%);
 	}
 	.widget .extendednavigation {
 		border-bottom: none;
