@@ -249,7 +249,8 @@ hr.line {
 
 .template-aside {
 	padding: 20px 25px;
-	float: left
+	float: left;
+	width: 50%;
 }
 
 .header-feature {
@@ -513,12 +514,12 @@ input[type=search],
 textarea {
 	text-indent: 0;
 	height: auto;
-	background: darken(@color-swatch1, 5%);
-	border: 1px solid darken(@color-swatch1, 10%);
-	border-radius: 2px;
+	background: lighten(@color-swatch1, 5%);
+	border: 1px solid darken(@color-swatch1, 20%);
+	border-radius: 5px;
 	line-height:@font-swatch5-line-height;
 	font-size:@font-swatch5-font-size;
-	padding: 8px 10px;
+	padding: 6px 10px;
 	&:focus {
 		border: 1px solid darken(@color-swatch1, 15%);
 	}	
@@ -552,6 +553,7 @@ button.btn,
 	font-family:@font-swatch5-font-family;
 	cursor: pointer;
 	border-radius: 10px 0 10px;
+	margin-left: 5px;
 	border: none;
 	&:hover {
 		background-color: darken(@color-swatch3, 10%);
@@ -562,6 +564,7 @@ button.btn,
 
 .widget.socialicons span a,
 .widget.profile .bk-profile-socialicons span a,
+.bk-profile-twitter,
 .template-footer .widget.profile .bk-profile-socialicons span a	{
 	background-color: @color-swatch1;
 	display: inline-block;
@@ -848,7 +851,7 @@ input[type="search"]::-webkit-search-decoration {
 
 .widget.ecomproductslist .ecom-productslist-products .productlist-filter .productlist-display-form .productlist-search button.btn {
     position: absolute;
-    height: 48px;
+    height: 44px;
     background-color: @color-swatch3;
     &:hover {
         background-color: darken(@color-swatch3,10%);
