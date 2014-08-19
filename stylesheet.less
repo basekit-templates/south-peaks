@@ -235,15 +235,19 @@ hr.line {
 	h1, h2 {
 		color: @color-swatch1;
 		font-weight: 200;
+		@media @tablet {
+	     line-height: 18px;
+    }
 
 	}
 	.widget.companyname a {
 		color: @color-swatch1;
 		font-size: 52px;
 		font-weight: 600;
-		@media @mobile {
-	     font-size: 26px;
-    }
+		@media @tablet {
+			font-size: 22px;
+			line-height: 18px;
+       }
 	}
 }
 
@@ -251,6 +255,10 @@ hr.line {
 	padding: 20px 25px;
 	float: left;
 	width: 50%;
+}
+
+.template-header .left {
+	padding: 30px 25px;;
 }
 
 .header-feature {
@@ -579,6 +587,11 @@ button.btn,
 	&:hover {
 		background-color:lighten(@color-swatch3,60%);
 	}
+}
+
+.twitter div.twitter-profile-pic a,
+div.twitter-profile-pic {
+  line-height: 0;
 }
 
 .svg {
