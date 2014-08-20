@@ -5,8 +5,8 @@
 				<h2>{{widget('profile', 'lefttopwidget', { 'profileType': 'socialicons' })|raw}}</h2>
 			</aside>
 			<aside class="template-aside right">
-				{{widget('extendednavigation', 'navigationheader', {})|raw}}
-		
+					{{widget('content', 'thisunqiuewidgetname', {content: 'This is a content widget.', lines: 'all'})|raw}}
+
 			</aside>
 		</div>
 		<div id="parallax" class="template-logo">
@@ -19,5 +19,12 @@
 
 <div class="main-wrap">
 	<nav class="template-nav">
-		{{widget('extendednavigation', 'navigationheader', {})|raw}}
+		{{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
+
 	</nav>
+
+
+
+
+
+
