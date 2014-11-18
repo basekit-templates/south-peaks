@@ -66,6 +66,9 @@ body {
 	min-height:100%;
 	background: image('/img/header-bg.jpg') no-repeat center top;
 	background-size: 100% auto;
+	@media @mobile {
+		background-size: cover;
+	}
 }
 
 html, body {
@@ -204,7 +207,7 @@ a {
 .main {
 	max-width: 1000px;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 30px 20px;
 	clear: both;
 }
 
@@ -250,6 +253,12 @@ hr.line {
 			line-height: 18px;
        }
 	}
+}
+
+.widget.logo,.widget.companyname, .widget.profile {
+	margin: 0 auto;
+	max-width: 1000px;
+	position: relative;
 }
 
 .template-aside {
