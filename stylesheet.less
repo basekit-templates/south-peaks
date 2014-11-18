@@ -221,6 +221,7 @@ hr.line {
 	color: @color-swatch1;
 
 	overflow: hidden;
+	padding-bottom: 30px;
 	position: relative;
 	.template-aside {
 		position: absolute;
@@ -241,9 +242,14 @@ hr.line {
 		font-weight: 200;
 		@media @tablet {
 	     line-height: 19px;
+   		 }
+   	}
+    h2 {
+    	@media @mobile {
+    		font-size: @font-swatch5-font-size;
+    		line-height: bk-scale(@font-swatch5-font-size, 0.8);
+    	}
     }
-
-	}
 	.widget.companyname a {
 		color: @color-swatch1;
 		font-size: 52px;
@@ -1184,7 +1190,9 @@ input[type="search"]::-webkit-search-decoration {
 			max-width: 100%;
 		}
 		#parallax {
-			margin-top: 50px;
+			margin-top: 40px;
+			padding-left: 30px;
+			padding-right: 30px;
 		}
 	}
 	.template-header .template-aside {
@@ -1215,7 +1223,7 @@ input[type="search"]::-webkit-search-decoration {
 		border-bottom: none;
 	}
 	.widget .extendednavigation ul {
-		padding: 0;
+		padding: 50px 0 0;
 	}
 	.widget .extendednavigation ul li,
 	.widget .extendednavigation ul.align-left li {
@@ -1235,5 +1243,12 @@ input[type="search"]::-webkit-search-decoration {
 	.widget .extendednavigation ul li.folder:hover ul {
 		margin: 1px 0 0;
 		border: none;
+	}
+}
+
+@media @mobile {
+	#parallax {
+		padding-left: 20px;
+		padding-right; 20px;
 	}
 }
