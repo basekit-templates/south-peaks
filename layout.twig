@@ -34,6 +34,15 @@
 				}
 				if (supportsSVG()) document.documentElement.className += ' svg'
 			}()
+
+			function is_touch_device() {
+			 return (('ontouchstart' in window)
+			      || (navigator.MaxTouchPoints > 0)
+			      || (navigator.msMaxTouchPoints > 0));
+			}
+			 
+			if (!is_touch_device()) {
+			
 			
 			window.onscroll = function pxParallax() {
 				var parallax = document.getElementById("parallax");
@@ -43,6 +52,7 @@
 				document.getElementById("header-fixed").style.top = (window.pageYOffset)+"px";
 				document.getElementById("image-fixed").style.backgroundPosition = "center "+(window.pageYOffset)+"px";
 			}
+		}
 		</script>
 
 	</body>
