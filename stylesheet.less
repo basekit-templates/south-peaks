@@ -180,13 +180,19 @@ h6 {
 p,
 .contactform label,
 .twitter ul li a,
-.signupform label {
+.signupform label,
+.advancedcontactform .form-group>label,
+.advancedcontactform .option-list .option-item .label {
 	font-family:@font-swatch5-font-family;
 	font-weight: @font-swatch5-font-weight;
 	color:@font-swatch5-color;
 	line-height:@font-swatch5-line-height;
 	letter-spacing: @font-swatch5-letter-spacing;
 	font-size: @font-swatch5-font-size;
+}
+
+.advancedcontactform .option-list {
+	padding: 1em 0;
 }
 
 a {
@@ -568,6 +574,7 @@ input[type=search] {
 }
 
 .contactform button.btn,
+.advancedcontactform fieldset button,
 button.btn,
 .widget.profile form button,
 .widget.paypalbuynow .widget.button.paypal,
@@ -592,7 +599,10 @@ button.btn,
 	}
 }
 
-
+.advancedcontactform fieldset button {
+	margin-left: 0;
+	margin-top: 10px;
+}
 
 .widget.socialicons span a,
 .widget.profile .bk-profile-socialicons span a,
