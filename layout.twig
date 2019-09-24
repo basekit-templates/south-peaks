@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="{{ page.seoLang }}">
+<html lang="{{ page.seoLang }}" {{ isV10sSite ? 'id="migrated-site"' : '' }}>
 
 	<head>
 		{% include "head.twig" %}
 		{% include basekit.headScript %}
 	</head>
 
-	<body id="image-fixed" class="{{ page.backgroundClass }} {{ site.colorSwatch }} {{ isV10sSite ? 'id="migrated-site"' : '' }}">
+	<body id="image-fixed" class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
 		<div class="page-wrap">
 			{% include "header.twig" %}
 			
